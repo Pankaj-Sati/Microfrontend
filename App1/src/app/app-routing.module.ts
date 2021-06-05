@@ -5,8 +5,13 @@ import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   {
+    path:'app1Home',
+    loadChildren:()=>import('./home/home.module').then(module=>module.HomeModule)
+  },
+  {
     path:'',
-    component:HomeComponent
+    redirectTo:'app1Home',
+    pathMatch:'full'
   },
   {
     path:'**',

@@ -11,7 +11,6 @@ import { Page404Component } from './page404/page404.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     Page404Component
   ],
   imports: [
@@ -28,7 +27,12 @@ export class AppModule implements DoBootstrap {
   ngDoBootstrap(appRef: ApplicationRef): void 
   {
     const customAppElement=createCustomElement(AppComponent,{injector:this.injector});
-    customElements.define('app-app1',customAppElement); //Defines the name and element constructor
+    if(!customElements.get('app-app1'))
+    {
+      //Custome element is not yet added
+      customElements.define('app-app1',customAppElement); //Defines the name and element constructor
+    }
+    
   }
 
 
