@@ -33,7 +33,12 @@ export class AppModule implements DoBootstrap
    */
   ngDoBootstrap(appRef: ApplicationRef): void {
     const customApp2Element=createCustomElement(AppComponent,{injector:this.injector});
-    customElements.define('app-app2',customApp2Element);
+    if(!customElements.get('app-app2'))
+    {
+      //Custom element is not added yet
+      customElements.define('app-app2',customApp2Element);
+    }
+  
   }
   
 }

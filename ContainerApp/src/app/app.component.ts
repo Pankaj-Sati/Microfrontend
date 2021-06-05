@@ -10,17 +10,18 @@ export class AppComponent {
 
   constructor()
   {
-    this.loadScript();
+    this.loadScript("http://localhost:8080/main.js"); //App1
+    this.loadScript("http://localhost:8081/main.js");//App2
   }
 
-  loadScript()
+  loadScript(src:string)
   {
     const scriptTag=document.createElement("script");
-    scriptTag.src="http://localhost:8080/app1-main.js";
+    scriptTag.src=src;
     scriptTag.defer=true;
     scriptTag.onload=()=>
     {
-      console.log('App1 script loaded')
+      console.log(`${src} loaded`);
     };
 
     const body=document.body;

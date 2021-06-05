@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --port 5000",
     "build": "ng build --output-hashing none --single-bundle true",
+    "server":"http-server ./dist/App2",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
