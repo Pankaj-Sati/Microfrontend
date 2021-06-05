@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/home']" routerLinkActive="activeClass">Home</a></li>
+      <li><a [routerLink]="['/app1']" routerLinkActive="activeClass">App1</a></li>
+      <li><a [routerLink]="['/app2']" routerLinkActive="activeClass">App2</a> </li>
+    </ul>
+  </nav>
+</header>
+
+<div id="mainContent">
+  <router-outlet></router-outlet>
+</div>
+
+
+<footer>
+  <h4>Developed By <span class="author">Pankaj Sati</span></h4>
+</footer>

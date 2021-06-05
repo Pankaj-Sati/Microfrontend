@@ -1,0 +1,49 @@
+/*Header*/
+header
+{
+    background-color: hsl(199, 98%, 65%);
+    nav
+    {
+        width:100%;
+        color:white;
+        ul
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            list-style: none;
+
+            li{
+                display: flex;
+                align-items: center;
+            }
+
+            a{
+                height:48px;
+                padding:0px 15px;
+                color:white;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/*Main Content*/
+#mainContent
+{
+    min-height: 70vh;
+    background-color: rgb(228, 228, 228);
+}
+
+/*Footer*/
+footer
+{
+    text-align: center;
+    .author
+    {
+        font-size: 1.2em;
+        color:green
+    }
+}
