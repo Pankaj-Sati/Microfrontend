@@ -1,6 +1,7 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,7 @@ export class AppModule implements DoBootstrap
       //Custom element is not added yet
       customElements.define('app-app2',customApp2Element);
     }
+    this.injector.get(Router).initialNavigation();
   
   }
   

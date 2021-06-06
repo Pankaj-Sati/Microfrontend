@@ -7,6 +7,8 @@ import { App1WrapperComponent } from './app1-wrapper/app1-wrapper.component';
 import { App2WrapperComponent } from './app2-wrapper/app2-wrapper.component';
 import { Page404Component } from './page404/page404.component';
 import { HomeComponent } from './home/home.component';
+import { LocationStrategy } from '@angular/common';
+import { CustomLocationStrategy } from './locationStrategy';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+
+  providers: [
+   ],
 
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   

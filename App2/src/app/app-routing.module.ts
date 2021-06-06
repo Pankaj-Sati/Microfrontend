@@ -5,11 +5,18 @@ import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
+ 
     component:HomeComponent
   },
   {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  {
     path:'**',
+
     component:Page404Component
   }];;
 

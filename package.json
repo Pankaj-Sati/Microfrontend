@@ -1,0 +1,20 @@
+{
+  "name": "microfrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:apps":"npm run --prefix App1 run start && cd - && --prefix App2 run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pankaj-Sati/Microfrontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pankaj-Sati/Microfrontend/issues"
+  },
+  "homepage": "https://github.com/Pankaj-Sati/Microfrontend#readme"
+}
